@@ -1,0 +1,16 @@
+{
+  "name": "taskflow_api",
+  "version": "1.0.0",
+  "description": "to learn ci/cd flow",
+  "license": "ISC",
+  "author": "jomi",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start" : "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
