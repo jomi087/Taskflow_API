@@ -32,3 +32,15 @@ jobs:
 
       - name: Run Tests
         run: npm test  # run test script(jest)
+    # # for better and for easy use docker which will make it more easy to write the steps
+
+# if mongodb then like this also were needed then like this 
+
+# - name: Install MongoDB
+#   run: |
+#     sudo apt update
+#     sudo apt install mongodb
+
+# - name: Start MongoDB
+#   run: sudo systemctl start mongodb
+
