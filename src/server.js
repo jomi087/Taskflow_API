@@ -1,36 +1,3 @@
 import express from 'express'
-
-const app = express()
-const port = 3000
-
-const tasks = []
-
-app.use(express.json())
-
-app.get('/health', (req, res) => {
-
-    res.status(200).json({
-        success: true,
-        msg: "working perfectly"
-    });
-})
-
-app.post('/tasks', (req, res) => {
-
-    const { title } = req.body;
-
-    const task = {
-        id: tasks.length + 1,
-        title,
-    };
-
-    tasks.push(task);
-
-    res.status(201).json({
-        success: true,
-        task,
-    });
-
-})
-
+import { app } from './app'
 app.listen(port, () => console.log(`server started running in port ${port}`))
