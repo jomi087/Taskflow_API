@@ -2,11 +2,13 @@ name: CI Pipeline
 
 # when to do is mentioned in "on"
 on: 
+  # on pull request related to main branch run the test
   pull_request:
     branches:
       - main
       #Run when PR is opened
       #Run when PR is updated
+  push:
 
 # what all things to do in menionted in "jobs" 
 jobs:

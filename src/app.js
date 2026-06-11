@@ -9,7 +9,7 @@ app.get('/health', (req, res) => {
 
     res.status(200).json({
         success: true,
-        msg: "working perfectly"
+        msg: "working perfectly v2"
     });
 })
 
