@@ -1,5 +1,5 @@
 import request from "supertest"//send fake http req (replace ment of postman for automation testing)
-import { app } from "./app.js"
+import { app } from "../app.js"
 
 describe("POST /tasks", () => { //Group of tests for POST /tasks
 
@@ -29,7 +29,7 @@ describe("POST /tasks", () => { //Group of tests for POST /tasks
 //? for common js 
 {
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": jest
   }
 }
 */
