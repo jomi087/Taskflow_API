@@ -1,0 +1,32 @@
+import express from 'express'
+export const app = express()
+
+const tasks = []
+
+app.use(express.json())
+
+app.get('/health', (req, res) => {
+
+    res.status(200).json({
+        success: true,
+        msg: "working perfectly v2"
+    });
+})
+
+app.post('/tasks', (req, res) => {
+
+    const { title } = req.body;
+
+    const task = {
+        id: tasks.length + 1,
+        title,
+    };
+
+    tasks.push(task);
+
+    res.status(201).json({
+        success: true,
+        task,
+    });
+
+})
