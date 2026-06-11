@@ -1,0 +1,34 @@
+name: CI Pipeline
+
+# when to do is mentioned in "on"
+on: 
+  pull_request:
+    branches:
+      - main
+      #Run when PR is opened
+      #Run when PR is updated
+
+# what all things to do in menionted in "jobs" 
+jobs:
+  # job 1 - test
+  test:
+
+    # GitHub creates a temporary Linux machine.
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4 # Downloads your repository in linux machine.
+
+        # install dependcies to run my project (node , library and its depedencies)
+      - name: Setup Node
+        uses: actions/setup-node@v4 # install node
+        with:
+          node-version: 22
+
+      - name: Install Dependencies 
+        run: npm install # install dip
+
+      - name: Run Tests
+        run: npm test  # run test script(jest)
