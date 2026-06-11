@@ -9,8 +9,10 @@ on:
       #Run when PR is opened
       #Run when PR is updated
   push:
+    branches:
+      - main
 
-# what all things to do in menionted in "jobs" 
+# what all things to do is menionted in "jobs" 
 jobs:
   # job 1 - test
   test:
