@@ -36,7 +36,11 @@ jobs:
 
       - name: Run Tests
         run: npm test  # run test script(jest)
+
+      - name: Run Lint
+        run: npm run lint
     # # for better and for easy use docker which will make it more easy to write the steps
+
 
 # if mongodb then like this also were needed then like this 
 
